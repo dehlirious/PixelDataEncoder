@@ -98,7 +98,7 @@ function encodeDataInImage($data, $inputImagePath = null) {
    * @param {string} base64Image - The base64 encoded image to decode data from.
    * @returns {Promise} A Promise that resolves with the decoded data or rejects with an error.
    */
-  function decodeDataFromImage3(base64Image) {
+  function decodeDataFromImage(base64Image) {
   	return new Promise((resolve, reject) => {
   		var img = new Image();
   		img.src = base64Image;
@@ -144,7 +144,7 @@ function encodeDataInImage($data, $inputImagePath = null) {
   //echo encodeDataInImage('your data here', 'DSC00092.JPG');
   var base64Image = '<?php echo encodeDataInImage('your data here', '');?>';
   
-  decodeDataFromImage3(base64Image).then(decodedData => {
+  decodeDataFromImage(base64Image).then(decodedData => {
   	console.log(decodedData); 
   });
 </script>
